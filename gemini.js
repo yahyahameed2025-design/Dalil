@@ -1,5 +1,5 @@
 /* قراءة الهوية والسجل التجاري عبر Gemini API (صور أو PDF) وإرجاع حقول جاهزة للتعبئة */
-const GEMINI_MODELS=["gemini-2.5-flash","gemini-2.0-flash"];
+const GEMINI_MODELS=["gemini-flash-latest","gemini-2.5-flash","gemini-2.0-flash"];
 const GEMINI_URL=m=>"https://generativelanguage.googleapis.com/v1beta/models/"+m+":generateContent";
 
 const GEMINI_PROMPT=`You are reading a Bahrain document: either a Commercial Registration (CR) certificate, or a personal ID card (CPR), as an image or PDF. Extract the fields below exactly as printed. Never guess: if a field is not visible or not applicable, return an empty string. Use Western digits (0-9).
